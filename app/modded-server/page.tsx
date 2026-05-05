@@ -1,13 +1,10 @@
-import Image from "next/image";
 import { PixelHeading } from "@/components/ui/pixel-heading-word";
 import { PixelHeading2 } from "@/components/ui/pixel-heading-character";
 import { Button } from "@/components/ui/button";
-import { Spinner } from "@/components/ui/spinner";
 import { RetroGrid } from "@/components/ui/retro-grid";
 import RippleButton from "@/components/ui/ripple-button";
 import {StartModdedEC2} from "@/components/api/modded/StartModdedEC2";
 import {StopModdedEC2} from "@/components/api/modded/StopModdedEC2";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { RotateCw } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import {imgRefresh} from "@/components/api/imgRefresh";
@@ -31,9 +28,9 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="flex flex-col font-pixel-square sm:flex-row mt-10">
+        <div className="flex flex-col font-pixel-square sm:flex-row mt-10 gap-2 md:gap-4">
             
-            <RippleButton size={"lg"} className=" text-xl py-6 px-5 font-extrabold mr-3 ml-0.5" >
+            <RippleButton size={"lg"} className=" text-xl py-6 px-5 font-extrabold " >
               <ShinyButton className="bg-mauve-50 size-7" onClick={imgRefresh}><RotateCw color="black"></RotateCw></ShinyButton>
                <button className="cursor-pointer" onClick={StartModdedEC2}>DEPLOY</button>
             {/*<Spinner data-icon="inline-start"/>*/}
