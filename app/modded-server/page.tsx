@@ -47,7 +47,7 @@ export default function Home() {
           <p className="max-w-md font-pixel-square text-lg leading-8 text-zinc-600 dark:text-zinc-400">
               Minecraft version: 1.20.2<br></br>
               Fabric: 0.19.2<br></br>
-              Mods: <a href="https://www.curseforge.com/minecraft/mc-mods/lucky-block" className="underline hover:bg-amber-50">Lucky Block by: player_in_distress</a> 
+              Mods: <a href=https://www.curseforge.com/minecraft/mc-mods/lucky-block/files/4842549" className="underline hover:bg-amber-50">Lucky Block by: player_in_distress</a> 
           </p>
               
         </div>
