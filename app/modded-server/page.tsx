@@ -31,8 +31,8 @@ export default function Home() {
         <div className="flex flex-col font-pixel-square sm:flex-row mt-10 gap-2 md:gap-4">
             
             <RippleButton size={"lg"} className=" text-xl py-6 px-5 font-extrabold " >
-              <ShinyButton className="bg-mauve-50 size-7" onClick={imgRefresh}><RotateCw color="black"></RotateCw></ShinyButton>
-               <button className="cursor-pointer" onClick={StartModdedEC2}>DEPLOY</button>
+              <ShinyButton className="bg-mauve-50 size-7"><RotateCw color="black"></RotateCw></ShinyButton>
+               <button className="cursor-pointer">DEPLOY</button>
             {/*<Spinner data-icon="inline-start"/>*/}
             </RippleButton>
           <Button variant={"outline"} size={"lg"}  className=" text-xl p-6  font-bold " onClick={StopModdedEC2}>STOP</Button>
