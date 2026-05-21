@@ -19,3 +19,5 @@ UI libraries: ShadCN, Reactbits.DEV
 ## Demo Website and Video
 ### Website: https://minecraft-server-hosting-demo-websi.vercel.app/
 ### Video Demo
+
+![front-end interface](https://github.com/MenuMinyu/Minecraft_Server_Hosting_Website/blob/main/Front-end.gif)
