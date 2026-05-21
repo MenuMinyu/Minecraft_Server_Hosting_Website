@@ -39,8 +39,8 @@ In the VPC the server is kept in a public subnet for Minecraft players to connec
 ---
 ## How to run project
 1. Copy the project using git or Github Desktop
-2. open the terminal then input "npm install"
-3. then "npm run dev"
+2. open the terminal then input ```npm install```
+3. then ```npm run dev```
 4. open localhost:3000 on your browser
 
 ---
