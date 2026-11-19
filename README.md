@@ -19,11 +19,11 @@ UI libraries: ShadCN, Reactbits.DEV
 ## Demo Website and Video
 ### Website: https://minecraft-server-hosting-demo-websi.vercel.app/
 ### Video Demo (Click the image to be redirected)
-[![Youtube video](https://i9.ytimg.com/vi/qnZrnn-s13A/mqdefault.jpg?v=6a00bf17&sqp=CPTYvdAG&rs=AOn4CLAnXFMdSAVcWIP_SeLdLj1f2hc9mQ)](https://youtu.be/qnZrnn-s13A)
+[![Youtube video](https://github.com/MenuMinyu/Minecraft_Server_Hosting_Website/blob/main/README-Images/Minecraft-server-hosting-platform-thumbnail.jpg?raw=true)](https://youtu.be/qnZrnn-s13A)
 
 ---
 ## High Level Architecture Diagram
-![Diagram](https://media.licdn.com/dms/image/v2/D4D12AQETWgM_rWbCsQ/article-inline_image-shrink_1500_2232/B4DZ4cYJg0GcAQ-/0/1778592553399?e=1781136000&v=beta&t=xqHloiASel5eZ41xUJjDWL8U6FkUtS8fLT-ovJ_w750)
+![Diagram](https://github.com/MenuMinyu/Minecraft_Server_Hosting_Website/blob/main/README-Images/high-level-diagram.png?raw=true)
 This is a diagram of the entire flow of the user experience and architecture on a high level. When a user connects to the website, they can see an attractive UI, two buttons “Deploy and Stop” then the status of the server. The website is hosted on Vercel due to its user-friendly interface, support for multiple frameworks, and its automatic CI/CD features that’s all free on the hobby plan. When deploy is clicked, it sends a get request to the API gateway which triggers the “start EC2” lambda function. The lambda then sends a command through the VPC to the EC2 instance to turn on. Once the EC2 turns on a Bash script to start the minecraft server runs shortly after.
 
 Startup takes roughly 30–60 seconds, so the frontend uses a third-party API to display the server’s status. Once the server is online the user can open Minecraft and connect to the server then switch it off when they’re done.
@@ -32,7 +32,7 @@ The architecture was designed with simplicity, control, and cost efficiency in m
 
 ---
 ## VPC Architecture Diagram
-![VPC Diagram](https://media.licdn.com/dms/image/v2/D4D12AQEFRCpGy_CXbA/article-inline_image-shrink_400_744/B4DZ4cYLGVKwAM-/0/1778592559892?e=1781136000&v=beta&t=0kTXjiKy-FxpF_GX3zb2i0Wp4VrXe4ESfyUJnwAAMH0)
+![VPC Diagram](https://github.com/MenuMinyu/Minecraft_Server_Hosting_Website/blob/main/README-Images/network-diagram.png?raw=true)
 
 In the VPC the server is kept in a public subnet for Minecraft players to connect to, The default port for Minecraft Java edition is 25565 which is open to anybody in TCP. To securely SSH into the EC2 I only allowed “EC2 instance connect” available from the AWS console to access it. The CIDR range is from Amazon themselves in the EU-West-1 region. Then for the EC2 to receive inbound and make outbound connections to the internet it connects to the internet gateway.
 
